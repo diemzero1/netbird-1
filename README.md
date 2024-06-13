@@ -251,7 +251,8 @@ docker compose start management
 ***Lỗi kết nối Agent đến Server, có hiển thị lên Dashboard nhưng không Active***
 - Sửa cấu hình `signal` trong file `management.json` từ `https` thành `http`
 
-![image](https://github.com/diemzero1/netbird/assets/113272767/63613c84-cbfc-409c-b866-5a6b58c5c852)
+![image](https://github.com/diemzero1/netbird/assets/113272767/099b49a1-0b27-4317-9575-73df6d0bb287)
+
 
 ***Lỗi ERR_CONNECTION_RESET***
 - Do thiếu Database Geo location
@@ -280,7 +281,8 @@ docker compose start management
 ```
 - Cấu hình netbird-client có thể dùng
   
-  ![image](https://github.com/diemzero1/netbird/assets/113272767/0d3bc954-dbd0-421e-8e7a-d3faf1d50823)
+![image](https://github.com/diemzero1/netbird/assets/113272767/aa1c0722-6e1b-43c0-b388-06ae9bb5eeaf)
+
 
 
 ### Open-Source Network Security in a Single Platform
