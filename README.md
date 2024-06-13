@@ -87,16 +87,19 @@ NETBIRD_IDP_MGMT_EXTRA_ADMIN_ENDPOINT="https://id.lab.linksafe.vn/admin/realms/n
 - Truy cập `https://id.lab.linksafe.vn/` và đăng nhập  
 - Tao realms: click vào ô `Master` ở góc trái chọn `Create Realm` tên là `netbird`
   
-  ![image](https://github.com/diemzero1/netbird/assets/113272767/6a169d37-e1f1-4d2c-bdbb-7b11d0c65326)
+![image](https://github.com/diemzero1/netbird/assets/113272767/f92225c9-9d0a-458d-ad23-0ad4e1871037)
+
 
   **Tạo User**
 - Chọn realms `netbird` rồi click vào tab `Users` và điền tên là `netbird` rồi `Create`
 
-  ![image](https://github.com/diemzero1/netbird/assets/113272767/c4d2aaeb-1dac-4757-9358-5ddb8691f1e2)
+![image](https://github.com/diemzero1/netbird/assets/113272767/b0239b63-e15d-446c-8de5-900a10e27a11)
+
   
 - Chọn tab `Credentials` rồi `Set password` và điền mật khẩu rồi tắt `Temporary` sau đó lưu
 
-  ![image](https://github.com/diemzero1/netbird/assets/113272767/52ee850e-d749-4204-bf0c-e90a555d97f1)
+![image](https://github.com/diemzero1/netbird/assets/113272767/c832a33d-8ba9-4d22-8c57-a89c467d8a69)
+
 
 **Tạo Netbird Client**
 - Chon tab `Clients`
@@ -105,16 +108,19 @@ NETBIRD_IDP_MGMT_EXTRA_ADMIN_ENDPOINT="https://id.lab.linksafe.vn/admin/realms/n
 - Client ID: `netbird-client`
 - Việc tạo `netbird-client` sẽ được sử dụng để cấu hình `NETBIRD_AUTH_CLIENT_ID` trong `setup.env`
   
-  ![image](https://github.com/diemzero1/netbird/assets/113272767/8fab7f1c-4f92-436b-b5cb-55ddeb468d86)
+![image](https://github.com/diemzero1/netbird/assets/113272767/720d79bf-475c-400e-997b-20648de0c163)
+
   
 - Sau đó tiếp tục cấu hình như hình sau:
 
-![image](https://github.com/diemzero1/netbird/assets/113272767/282c6fdc-01c0-4600-964b-5e672fe11b2f)
+![image](https://github.com/diemzero1/netbird/assets/113272767/e7c58aae-d112-40e7-a595-5a7c08ed199a)
+
 
 - Tiếp theo với Access settings
 - Thay `192.168.15.128` bằng ip của máy và lưu
   
-![image](https://github.com/diemzero1/netbird/assets/113272767/774ee82a-d657-4fa3-9d92-82709b124de9)
+![image](https://github.com/diemzero1/netbird/assets/113272767/58ed0c8a-0c64-460e-9369-319f53910e5b)
+
 
 **Tạo Client Scope**
 - Chọn realms `netbird` rôi chọn tab `Client scopes` và `Create client scope`
@@ -123,13 +129,15 @@ NETBIRD_IDP_MGMT_EXTRA_ADMIN_ENDPOINT="https://id.lab.linksafe.vn/admin/realms/n
 - Protocol: `OpenID Connect`
 - Click `Save`
  
-  ![image](https://github.com/diemzero1/netbird/assets/113272767/34dd4c50-ebf2-4c90-963a-39013ece535b)
+![image](https://github.com/diemzero1/netbird/assets/113272767/b7a42dcd-6890-4b26-b80a-5283ba60bf74)
+
 
 - Chuyển sang tab `Mappers`
 - Click `Configure a new mapper`
 - Choose the `Audience` mapping
 
-  ![image](https://github.com/diemzero1/netbird/assets/113272767/66a9eea8-c99e-497e-a25e-a5c6736b6e1e)
+![image](https://github.com/diemzero1/netbird/assets/113272767/7d972868-e16b-4a82-9f6d-e2928bc446f3)
+
 
 - Sau đó điền form:  
 - Name: `Audience for NetBird Management API`
@@ -137,7 +145,8 @@ NETBIRD_IDP_MGMT_EXTRA_ADMIN_ENDPOINT="https://id.lab.linksafe.vn/admin/realms/n
 - Add to access token: `On`
 - Click `Save`
 
-![image](https://github.com/diemzero1/netbird/assets/113272767/a2f73b97-e013-4fcc-863a-ef72f055af96)
+![image](https://github.com/diemzero1/netbird/assets/113272767/ff6b1ea9-2702-4b2e-beaf-5b4d88afe8eb)
+
 
 ***Add client scope to NetBird client***
 - Chọn tab `Clients`
@@ -148,7 +157,8 @@ NETBIRD_IDP_MGMT_EXTRA_ADMIN_ENDPOINT="https://id.lab.linksafe.vn/admin/realms/n
 - Click `Add` choosing `Default`
 - The value `netbird-client` will be used as audience
 
-  ![image](https://github.com/diemzero1/netbird/assets/113272767/dda0940c-e1a8-4f41-b224-7e2a551f1cbc)
+![image](https://github.com/diemzero1/netbird/assets/113272767/d3d6d12a-4a32-4b96-9318-6b10f20af28a)
+
 
 ***Create a NetBird-Backend client***
 - Click `Clients` tab
@@ -158,14 +168,17 @@ NETBIRD_IDP_MGMT_EXTRA_ADMIN_ENDPOINT="https://id.lab.linksafe.vn/admin/realms/n
 - Client ID: `netbird-backend`
 - Client vừa tạo `netbird-backend` được dùng để cấu hình `NETBIRD_IDP_MGMT_CLIENT_ID` trong `setup.env`
 
-  ![image](https://github.com/diemzero1/netbird/assets/113272767/c6bd98c8-807d-4231-8958-1e64cd0b09af)
+![image](https://github.com/diemzero1/netbird/assets/113272767/a4c54fed-8982-453a-9bd3-bf8df84ef769)
 
-  ![image](https://github.com/diemzero1/netbird/assets/113272767/eee7d252-a205-486c-be31-a4402d491848)
+
+![image](https://github.com/diemzero1/netbird/assets/113272767/046d2142-253e-4464-8032-c9b8ac3ec2bc)
+
 
 - Chọn tab `Credentials` trong `netbird-backend`  
 - Copy `client secret` sẽ được dùng để cấu hình `NETBIRD_IDP_MGMT_CLIENT_SECRET` trong `setup.env`
 
-  ![image](https://github.com/diemzero1/netbird/assets/113272767/e9bcc860-9c37-4387-96d8-690f48786f1f)
+![image](https://github.com/diemzero1/netbird/assets/113272767/32080e7b-51bd-4663-8638-6511b13c8ac6)
+
 
 ***Add view-users role to netbird-backend***
 - Click `Clients`
@@ -174,11 +187,13 @@ NETBIRD_IDP_MGMT_EXTRA_ADMIN_ENDPOINT="https://id.lab.linksafe.vn/admin/realms/n
 - Click `Assign roles` button
 - Chọn `Filter by clients` và tìm kiếm cho `view-users`
 
-  ![image](https://github.com/diemzero1/netbird/assets/113272767/87da6c95-b200-4001-8659-7cddb262a6ea)
+![image](https://github.com/diemzero1/netbird/assets/113272767/bcb2a400-55be-460b-a98e-bfce26e61907)
+
 
 - Chọn `view-users` và `Assign`
 
-  ![image](https://github.com/diemzero1/netbird/assets/113272767/ab582507-0bfc-4dfc-bf5c-cc7219569164)
+![image](https://github.com/diemzero1/netbird/assets/113272767/84b879fb-438e-4a71-8e3c-35b74efc09dc)
+
 
 ***Bước 4: Run configuaration script***
 - Tại thư mục `netbird/infrastructure_files/` chạy lệnh `./configure.sh` bằng command
@@ -218,11 +233,13 @@ docker compose start management
 ***Cấu hình cho truy cập dashboard từ máy khách***
 - NETBIRD_DOMAIN sẽ là ip chứ không dùng localhost
   
-![image](https://github.com/diemzero1/netbird/assets/113272767/c53bd8b2-3387-4de1-a698-e3d7ab36448e)
+![image](https://github.com/diemzero1/netbird/assets/113272767/8d298e46-a52c-4b6c-8f97-3b6d99a49d50)
+
 
 - Sau khi chạy lệnh `./configure.sh` thì cần chỉnh sửa file `docker-compose.yml` thành:
 
-![image](https://github.com/diemzero1/netbird/assets/113272767/d2ee813b-e24f-4a04-9c4a-0cd8ca620df6)
+![image](https://github.com/diemzero1/netbird/assets/113272767/cbd504e6-7c2d-4e89-a946-5cadfaed812d)
+
 
 ***LỖi 401 unauthorized***
 - Do `api` trong `Client Scopes`
